@@ -1,0 +1,96 @@
+Metadata-Version: 2.1
+Name: project-tools
+Version: 0.0.1
+Summary: A Python library to run Tobacco Analysis
+Author: Isabel Adelhardt, Jiangyue Chen, Daniel Jang, and Zilin Zhang
+Author-email: izzyadelhardt@berkeley.edu
+License: BSD 3-Clause License
+Keywords: tools,ligo
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Group 14 Final Project
+
+## Analysis of the relationship between cigarette sales per capita and median income by States in the US
+
+Group 14: Zilin Zhang, Jiangyue Chen, Daniel Jang, Isabel Adelhardt
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UCB-stat-159-s23/project-group14.git/HEAD?labpath=main.ipynb)
+
+## Project Overview
+
+This project is to calculate and analyze the relationship between cigeratte sales per capita and median income in 51 different states in the United States from 2013 to 2019. In order to come out with a conclusion, we analyze and present the changing trend of cigeratte sales per capita and median income in 51 states from 2013 to 2019. Afterwards, we calculate the regression between two dataset and figure out the relationship between these two variables. 
+
+## Data Source
+
+Our team retrieves the tobacco sales data from [US Chronic Disease Indicators](https://chronicdata.cdc.gov/Chronic-Disease-Indicators/U-S-Chronic-Disease-Indicators-Tobacco/rrbt-bhen), and the median income data from [US Census Bureau](https://www2.census.gov/programs-surveys/cps/tables/time-series/historical-income-households/h08.xls). We then converted the data into cvs files using online file type converter, and put them into the folder `data/`.
+
+## Project Website
+
+Link to our Jupyter Book: https://ucb-stat-159-s23.github.io/project-group14
+
+## Repository structure
+
+`data/:`contains two raw data files and one processed data file
+
+`output/:`contains the generated plots for EDA
+
+`figures/:`contains png versions for html graphs generated in MapPlot.ipynb for displaying purposes
+
+`project_tools/:`contains `tests/` and `dataformat.py` which are necessary files to build up our work in the analysis notebooks
+
+`main.ipynb:` Main Notebook for our project, contains data analysis and interpretation
+
+`sales-of-cigarette-each-state.ipynb:` contains data processing, plotting, and analyzing of the changing trend of cigarette sales in 51 different states from 2013 to 2019
+
+`MapPlot.ipynb:` contains data processing, plotting (choropleth map plots), and analyzing of both average sales and median income in 51 different states from 2013 to 2019 (2015 omitted)
+
+`LinearRegression.ipynb:` contains data processing, prediction, plotting, and analyzing the relationship between tobacco sales and average median income in specific states from 2013 to 2019 through linear regression
+
+## Package Structure
+
+The `project_tools` package is for reading in the tobacco sales data that was downloaded from the U.S. Chronic Disease Indicators as a data table. It then cleans the data table, so only relevant columns and rows are included. The package also reads in the average median income data that we downloaded from the U.S. Bureau of the Census, Current Population Survey, Annual Social, and Economic Supplements. We then clean the datatable, so we have only the necessary columns and add in the corresponding state's abbreviation. 
+
+## Testing
+
+The  `test_dataformat.py` tests our functions `dataformat.py` by making sure that the data that it returns is the correct dimensions.
+
+## License
+
+Our project employs the BSD 3-Clause License.
+
+
+
+
+BSD 3-Clause License
+
+Copyright (c) 2023, UCB-stat-159-s23-Group14
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its
+   contributors may be used to endorse or promote products derived from
+   this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.

@@ -1,0 +1,18 @@
+name: projenvs
+dependencies:
+  - python=3.9
+  - ipykernel
+  - tqdm
+  - numpy>=1.23
+  - h5py>=3.7S
+  - matplotlib>=3.5
+  - ipython>=8.2
+  - ipykernel>=5.5
+  - decorator>=5.1
+  - scipy>=1.8
+  - plotly
+  - pandas
+  - pytest
+  - scikit-learn
+  # - pip:
+  #   - -e ./project_tools
